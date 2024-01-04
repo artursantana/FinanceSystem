@@ -1,11 +1,13 @@
 import * as C from './style'
 import { Item } from '../../types/Item'
 
-type Props ={
-  list: Item[]
+type Props = {
+  list: Item[];
 }
 
+
 const Index = ({list}: Props) => {
+  console.log(list)
   return (
     <C.Table>
         <thead>
@@ -17,11 +19,8 @@ const Index = ({list}: Props) => {
             </tr>
         </thead>
         <tbody>
-          {
-                list.map(()=> (
-                  <tr>artur</tr>
-                ))
-          }
+         
+          
         </tbody>
     </C.Table>
   )
