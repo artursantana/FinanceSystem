@@ -1,13 +1,14 @@
 import * as C from './style'
-import { Item } from '../../types/Item'
+import {Item} from '../../types/Item'
+import TableItem from '../TableItem/Index'
 
 type Props = {
   list: Item[];
 }
 
 
+
 const Index = ({list}: Props) => {
-  console.log(list)
   return (
     <C.Table>
         <thead>
@@ -19,7 +20,11 @@ const Index = ({list}: Props) => {
             </tr>
         </thead>
         <tbody>
-         
+         {
+          list.map((ite, index) => (
+            <TableItem key={index} tableItem={ite} />
+          ))
+         }
           
         </tbody>
     </C.Table>

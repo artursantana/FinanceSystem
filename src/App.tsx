@@ -14,17 +14,16 @@ import { useState, useEffect } from 'react'
 
 function App() {
 const [ list, setList ] = useState(items);
-const [ filterlist, setFilterList ] = useState<Item[]>([])
 const [ currentMonth, setCurrentMonth ] = useState(getHelper())
-
+const [ filterlist, setFilterList ] = useState<Item[]>([])
 
   useEffect(()=> {
+   
+    setFilterList( FilterListByMonth(list, currentMonth) )
 
-setFilterList( FilterListByMonth(list, currentMonth) )
 
   }, [list,currentMonth])
-
-
+  
 
   return (
    <C.Container>
@@ -34,7 +33,7 @@ setFilterList( FilterListByMonth(list, currentMonth) )
       </C.HeaderText>
     </C.Header>
     <C.Body>
-      <TableArea />
+      <TableArea list={filterlist} />
     </C.Body>
    </C.Container>
   )
