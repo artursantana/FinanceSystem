@@ -5,3 +5,5 @@ export const categories: Category = {
     rent: { title: 'Rent', color: 'brown', expensive: true },
     salary: { title: 'Salary', color: 'green', expensive: false }
 }
+
+export default categories

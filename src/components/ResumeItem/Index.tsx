@@ -3,13 +3,14 @@ import * as C from './style'
 type Props = {
     title: string
     value: number
+    color?: string
 }
 
-const Index = ({title, value}: Props) => {
+const Index = ({title, value, color}: Props) => {
   return (
     <C.Container>
         <C.Title>{title}</C.Title>
-        <C.Info>€ {value}</C.Info>
+        <C.Info cole={color}>€{value}</C.Info>
     </C.Container>
   )
 }

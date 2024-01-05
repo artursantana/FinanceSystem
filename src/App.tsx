@@ -4,7 +4,7 @@ import {Item} from './types/Item'
 import { Category } from './types/category'
 
 import { items } from './data/Items'
-import { Categories, categories } from './data/categories'
+import { categories } from './data/categories'
 import { getHelper, FilterListByMonth } from './data/helpers/dateFilters'
 import TableArea from "./components/table/Index"
 import InfoArea from './components/InforArea/Index'
@@ -31,8 +31,8 @@ const [ expensiveInc, setExpensiveInc] = useState(0)
 
   useEffect(()=> {
 
-    const inc = 0
-    const expens = 0
+    let inc = 0
+    let expens = 0
 
     for(const i in filterlist)
     if(categories[filterlist[i].category].expensive){
@@ -41,6 +41,9 @@ const [ expensiveInc, setExpensiveInc] = useState(0)
     }else{
       inc += filterlist[i].value
     }
+
+    setInCome(inc);
+    setExpensiveInc(expens);
 
   },[filterlist])
 

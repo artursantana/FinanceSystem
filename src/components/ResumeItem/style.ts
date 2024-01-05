@@ -17,11 +17,10 @@ margin-bottom: 5px;
 
 `
 
-export const Info = styled.div`
+export const Info = styled.div<{cole?: string}>`
 
 text-align: center;
 font-weight: bold;
-color: #000;
-
+color: ${({cole}) => cole ?? 'black'};
 
 `

@@ -44,7 +44,11 @@ const Index = ({currentRequest, onMonthChange, expensiveRequest, inComeRequest}:
       <C.ResumeArea>
         <ResumeIndex title='revenues' value={inComeRequest}/>
         <ResumeIndex title='expenses' value={expensiveRequest}/>
-        <ResumeIndex title='balance' value={inComeRequest-expensiveRequest}/>
+        <ResumeIndex
+         title='balance'
+         value={inComeRequest-expensiveRequest}
+         color={(inComeRequest-expensiveRequest) < 0 ? 'red' : 'green'}
+         />
       </C.ResumeArea>
     </C.Container>
   )
