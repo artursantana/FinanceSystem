@@ -57,3 +57,17 @@ export const formatDate = (date: Date): string => {
 return `${day}/${month}/${year}`
 
 }
+
+
+
+
+
+export const formatCurrentMonth = (currentMonthNew: string): string => {
+
+        const [year, month] = currentMonthNew.split('-')
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+        return `${months[parseInt(month)-1]} ${year}`
+
+
+}
