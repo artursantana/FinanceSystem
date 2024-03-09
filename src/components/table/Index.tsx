@@ -27,6 +27,7 @@ const Index = ({list}: Props) => {
          }
           
         </tbody>
+       
     </C.Table>
   )
 }

@@ -7,6 +7,7 @@ import { categories } from './data/categories'
 import { getHelper, FilterListByMonth } from './data/helpers/dateFilters'
 import TableArea from "./components/table/Index"
 import InfoArea from './components/InforArea/Index'
+import Index from './components/inputArea/Index'
 
 
 import { useState, useEffect } from 'react'
@@ -75,6 +76,7 @@ const [ expensiveInc, setExpensiveInc] = useState(0)
       inComeRequest={inCome}
       expensiveRequest={expensiveInc}
       />
+      <Index/>
       <TableArea list={filterlist} />
     </C.Body>
    </C.Container>

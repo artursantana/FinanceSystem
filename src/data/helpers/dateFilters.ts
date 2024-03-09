@@ -14,13 +14,6 @@ export const getHelper = ()  => {
 
 
 
-
-
-
-
-
-
-
 export const FilterListByMonth = (list: Item[], date: string): Item[] => {
 
     
@@ -42,13 +35,6 @@ export const FilterListByMonth = (list: Item[], date: string): Item[] => {
 }
 
 
-
-
-
-
-
-
-
 export const formatDate = (date: Date): string => {
     const year = date.getFullYear()
     const month = (date.getMonth()+1).toString().padStart(2, '0')
@@ -59,15 +45,11 @@ return `${day}/${month}/${year}`
 }
 
 
-
-
-
 export const formatCurrentMonth = (currentMonthNew: string): string => {
 
         const [year, month] = currentMonthNew.split('-')
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
         return `${months[parseInt(month)-1]} ${year}`
-
 
 }
