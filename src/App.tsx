@@ -1,7 +1,6 @@
 import * as C from './App.styles'
 
 import {Item} from './types/Item'
-import { Category } from './types/category'
 
 import { items } from './data/Items'
 import { categories } from './data/categories'
@@ -14,7 +13,7 @@ import { useState, useEffect } from 'react'
 
 
 function App() {
-const [ list, setList ] = useState(items);
+const [ list] = useState(items);
 const [ currentMonth, setCurrentMonth ] = useState(getHelper())
 const [ filterlist, setFilterList ] = useState<Item[]>([])
 const [ inCome, setInCome] = useState(0)
