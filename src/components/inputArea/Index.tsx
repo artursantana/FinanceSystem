@@ -7,11 +7,11 @@ const Index = () => {
     <thead>
         <tr>
     <C.TableHeadColumn width={100}>
-        <h3>choose data</h3>
+        <h3>data</h3>
        <input type="date" />
     </C.TableHeadColumn>
     <C.TableHeadColumn width={130}>
-        <h3>Select Category</h3>
+        <h3>Category</h3>
         <select>
             <option>1</option>
             <option>2</option>
