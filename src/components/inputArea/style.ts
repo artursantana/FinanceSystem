@@ -9,6 +9,14 @@ box-shadow: 0px 0px 5px #CCC;
 border-radius: 10px;
 margin-top: 20px;
 
+thead {
+    
+    button{
+        
+        
+    }
+}
+
 `
 
 export const TableHeadColumn = styled.th<{width?: number }>`
