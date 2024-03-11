@@ -8,7 +8,9 @@ type Props = {
 
 
 
+
 const Index = ({list}: Props) => {
+  
   return (
     <C.Table>
         <thead>

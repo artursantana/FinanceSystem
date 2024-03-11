@@ -1,8 +1,9 @@
 import * as C from './style'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { items } from '../../data/Items';
 
 const Index = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [formData, setFormData] = useState({
     date: '',
     category: 'Food',
@@ -26,6 +27,8 @@ const Index = () => {
       };
       items.push(newItem);
 
+      
+
       setFormData({
         date: '',
         category: 'Food',
@@ -38,9 +41,26 @@ const Index = () => {
     alert('Item adicionado!')
   };
 
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+   
+    window.addEventListener('resize', handleResize);
+
+   
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+console.log(windowWidth)
+
   return (
     <>
-    <C.Table>
+    <C.Table windowwidth={windowWidth}>
       <thead>
         <tr>
           <C.TableHeadColumn width={100}>
@@ -60,14 +80,16 @@ const Index = () => {
             <h3>Title</h3>
             <input type="text" name="title" value={formData.title} onChange={handleInputChange} />
           </C.TableHeadColumn>
-          <C.TableHeadColumn width={150}>
+          <C.TableHeadColumn width={150} className='sent'>
             <h3>Value</h3>
             <input type="text" name="value" value={formData.value} onChange={handleInputChange} />
+         
           </C.TableHeadColumn>
+          <C.TableHeadColumn> <button onClick={handleFormSubmit}>➡️</button></C.TableHeadColumn>
         </tr>
       </thead>
     </C.Table>
-          <button onClick={handleFormSubmit}>Send</button>
+         
           </>
   );
 }
