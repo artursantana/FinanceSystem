@@ -36,3 +36,6 @@ button {
 
 
 `
+
+export const TableDataColumn = styled.td`
+`

@@ -10,12 +10,13 @@ type Props = {
 
 
 const Index = ({list}: Props) => {
-  
+
   return (
     <C.Table>
+
         <thead>
             <tr>
-        <C.TableHeadColumn width={100}>Data</C.TableHeadColumn>
+        <C.TableHeadColumn width={100}>Date</C.TableHeadColumn>
         <C.TableHeadColumn width={130}>Category</C.TableHeadColumn>
         <C.TableHeadColumn>Title</C.TableHeadColumn>
         <C.TableHeadColumn width={150}>Value</C.TableHeadColumn>
@@ -29,7 +30,6 @@ const Index = ({list}: Props) => {
          }
           
         </tbody>
-       
     </C.Table>
   )
 }
