@@ -60,7 +60,7 @@ console.log(windowWidth)
 
   return (
     <>
-    <C.Table windowwidth={windowWidth}>
+    <C.Table>
       <thead>
         <tr>
           <C.TableHeadColumn width={100}>
